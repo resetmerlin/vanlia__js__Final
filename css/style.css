@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    color: #ADBAB3;
+    font-size: 10px;
+    font-weight: 300;
+
+}
+   
+body{
+    background: #36404e;
+    font-family: 'Press Start 2P', cursive;
+
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* overflow: hidden : 넘친 text 자름 */
+
+}
+
+
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    height: 100%;
+    width: 80px;
+    background: #36404e;
+    padding: 6px 14px;
+    border: solid 2px;
+    border-color: rgba(224, 224, 224, 0.116);
+
+    transition: all 0.5s ease;
+    
+
+
+}
+
+.sidebar.active{
+    width: 240px;
+}
+
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.sidebar.active .logo_content .logo{
+    opacity: 1;
+    pointer-events: none;
+
+}
+
+
+
+.logo_content .logo i{
+    font-size: 30px;
+    margin-right: 5px;
+    margin-top: -10px;
+}
+
+
+
+.logo_content .logo_name{
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+
+.sidebar #btn{
+    position: absolute;
+    color: #fff;
+    top: 6px;
+    left: 50%;
+
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+
+
+.sidebar ul li{
+
+
+    position: relative;
+    height: 50px;
+width: 100%;
+margin: 0 5px;
+list-style: none;
+line-height: 50px;
+
+
+}
+.sidebar ul li .tooltip{
+
+
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 30px;
+    width: 100px;
+    background: #2d3541;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0  #fff;
+    border: solid 1px #fff;
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+
+}
+
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+
+}
+
+.sidebar.active ul li .tooltip{
+    display: none;
+
+}
+.sidebar ul li input{
+
+position: absolute;
+height: 100%;
+width: 100%;
+left: 0;
+
+top: 0;
+
+border-radius: 12px;
+outline: none;
+border: none;
+
+background: #2d3541;
+padding-left: 50px;
+font-size: 18px;
+color: #fff;
+
+}
+.sidebar ul li a{
+
+color: #fff;
+display: flex;
+align-items: center;
+text-decoration: none;
+transition: all 0.4s ease;
+border-radius: 10px;
+
+white-space: nowrap;
+
+
+
+}
+
+.sidebar ul li .bx-search{
+    position: absolute;
+    z-index: 50;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.sidebar ul li .bx-search:hover{
+    background: #2d3541;
+    color: #fff;
+
+}
+.sidebar ul li a:hover{
+color: #fff;
+background-color: #262d38;
+border-left: 60px solid #2d3541;
+
+ 
+    
+    
+    
+    
+    
+    
+    }
+
+.sidebar span{
+        opacity: 0;
+        pointer-events: none;
+}
+
+.sidebar.active span{
+        opacity: 1;
+        pointer-events: none;
+    }
+    
+
+
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+
+    line-height: 50px;
+    text-align: center;
+    
+    
+    
+    
+    }
+
+
+.nav_list li{
+    margin-top: 10px;
+}
+
+
+.nav_list a{
+
+	text-decoration: none;
+}
+
+
+.nav_list i{
+
+    font-size: 18px;
+}
+
+.profile{
+    margin-top: 15px;
+}
+
+
+.name_job .name{
+    margin-bottom: 10px;
+}
+
+.name_job .job{
+    margin-bottom: 10px;
+}
+
+.sidebar .profile_content{
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+}
+
+.profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .profile_details{
+    opacity: 1;
+    pointer-events: auto;
+}
+.profile .profile_details img{
+
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.profile .profile_details .name_job{
+
+    margin-left: 10px;
+}
+
+
+.profile .profile_details .name{
+
+    font-size: 10px;
+    font-weight: 400;
+}
+
+
+
+#log_out{
+
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translate(-50%);
+    min-width: 50px;
+    line-height: 50px;
+
+    font-size: 20px;
+    border-radius: 12px;
+}
+
+
+.home_content{
+    position: absolute;
+    height: 100%;
+    width: calc(100%-240px);
+    left: 240px;
+}
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    margin-left: 12px;
+}
+
+
+.home_content img{
+    position: fixed;
+    top:20%;
+    left: 25%;
+    width:1000px;
+    height: 500px;
+    box-shadow: 0 5px 10px #171b22;
+}
+
+
+/* sdfas */
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 75px;
+
+}
+
+.container .StartText{
+    color: rgb(204, 204, 204);
+    font-size: 30px;
+    padding-right: 30px;    
+}
+.container .Texts{
+    margin-left: 15px;
+    height: 100px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.Texts li{
+    list-style: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    position: relative;
+    top: 0 ;    
+    animation: slide 12s steps(3) infinite;
+}
+
+@keyframes slide{
+    100% {
+        top:-360px;
+    }
+}
+
+
+.Texts li span{ position: relative;
+margin: 5px 0;
+list-style: 90px;
+font-size: 14px;
+}
+
+
+.Texts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+height: 120%;
+width: 100%;
+background: #36404e;
+border-left: 2px solid #36404e;
+animation: typing 2s steps(10);
+
+
+
+
+
+
+}
+
+@keyframes typing{
+    40%,60%{
+        left:calc(100%+30px);
+    }
+    100%{left:0;}
+}
