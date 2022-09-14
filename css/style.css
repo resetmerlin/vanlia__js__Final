@@ -321,29 +321,37 @@ border-left: 60px solid #2d3541;
 
     font-size: 20px;
     border-radius: 12px;
+    
 }
 
 
 .home_content{
     position: absolute;
     height: 100%;
-    width: calc(100%-240px);
+    width: 100%;
     left: 240px;
+    overflow:hidden;
+    
 }
-.home_content .text{
+.text{
+    position: absolute;
+    top: 0;
     font-size: 25px;
     font-weight: 500;
     color: white;
-    margin-left: 12px;
+    right: 0;
+    margin:10px;
 }
 
 
 .home_content img{
-    position: fixed;
-    top:20%;
-    left: 25%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
     width:1000px;
-    height: 500px;
+    height: 500px; 
     box-shadow: 0 5px 10px #171b22;
 }
 
@@ -355,8 +363,8 @@ border-left: 60px solid #2d3541;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
-    margin-left: 75px;
+    margin-top: 80px;
+    margin-left: 250px;
 
 }
 
@@ -418,4 +426,12 @@ animation: typing 2s steps(10);
         left:calc(100%+30px);
     }
     100%{left:0;}
+}
+
+
+.size_form{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    width: 100px;
 }
