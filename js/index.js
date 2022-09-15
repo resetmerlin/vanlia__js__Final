@@ -1,17 +1,45 @@
 let btn  = document.querySelector("#btn");
 let sidebar  = document.querySelector(".sidebar");
 let searchBtn  = document.querySelector("bx-search");
+let input = document.querySelector("input");
+let backgroundWidth = document.querySelector(".main-screen");
 
-btn.onclick = function(){
-    sidebar.classList.toggle("active");
+
+
+function changeWidth(){
+    const state = sidebar.classList.toggle("active");
+
+    if(state){
+        backgroundWidth.style.left=("360px");
+        
+
+    }else{
+        backgroundWidth.style.left=("150px");
+
+    }
 
 }
 
-
-searchBtn.onclick = function(){
-    sidebar.classList.toggle("active");
+btn.addEventListener("click",changeWidth
+    );
     
+
+    
+
+    
+
+
+searchBtn.addEventListener("click",()=>{
+    sidebar.classList.toggle("active");
+
 }
+)
+
+input.addEventListener("click",()=>{
+    input.classList.toggle("active");
+
+}
+)
 
 // sidebar.onclick = function(){
 //     sidebar.classList.toggle("active");

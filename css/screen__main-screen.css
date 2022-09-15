@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+
+.home_content h1{
+    position: absolute;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    top: 3.6%;
+    left: 2%;
+    
+}
+#home_content__question-lists{
+    position: absolute;
+    top:10%;
+    width: 100%;
+ 
+
+}
+.home_content__question-list-default{
+
+    border:  solid #424f61 2px; 
+    height: 160px;
+}
+
+#home_content__question-lists div:nth-child(3n+1){
+    background-color: #333c4d;
+}
+
+
+
+.question-lists__state-default{
+    height: 105px;
+    width: 150px;
+    box-sizing: border-box;
+    border-right:  solid #424f61 2px; 
+    height: 160px;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    
+    
+}
+
+.question-lists__state-default span{
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    
+    
+}
